@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My gathu <3 ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Dancing Script', cursive;
+    background:linear-gradient(
+        135deg,
+        #ffe5ec,
+        #ffc2d1,
+        #ffb3c6,
+        #ffc8dd
+    );
+    color:black;
+    overflow-x:hidden;
+}
+
+section{
+    min-height:100vh;
+    padding:60px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+h3{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+p{
+    max-width:850px;
+    font-size:1.7rem;
+    line-height:1.8;
+}
+
+.btn{
+    margin-top:25px;
+    padding:16px 30px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:black;
+    cursor:pointer;
+    font-family:'Dancing Script', cursive;
+    font-size:1.6rem;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.btn:hover{
+    transform:scale(1.08);
+}
+
+.card{
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,.45);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+    padding:25px;
+    margin:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.gallery img{
+    width:280px;
+    max-width:90%;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.video-box{
+    width:100%;
+    max-width:750px;
+    margin:15px 0;
+}
+
+.video-box video{
+    width:100%;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+#reasonBox{
+    margin-top:20px;
+    font-size:2rem;
+}
+
+#surprise{
+    display:none;
+    margin-top:20px;
+}
+
+.music-btn{
+    position:fixed;
+    top:15px;
+    right:15px;
+    z-index:999;
+}
+
+.heart{
+    position:fixed;
+    bottom:-20px;
+    pointer-events:none;
+    animation:float 6s linear infinite;
+}
+
+.footer{
+    padding:30px;
+    text-align:center;
+    font-size:1.5rem;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+
+@media(max-width:768px){
+
+h1{
+    font-size:3rem;
+}
+
+h2{
+    font-size:2.3rem;
+}
+
+p{
+    font-size:1.4rem;
+}
+
+.btn{
+    font-size:1.3rem;
+}
+}#gameArea{
+    width:100%;
+    max-width:500px;
+    height:350px;
+    margin:20px auto;
+    background:rgba(255,255,255,.35);
+    border-radius:25px;
+    position:relative;
+    overflow:hidden;
+}
+
+.game-heart{
+    position:absolute;
+    font-size:35px;
+    cursor:pointer;
+    user-select:none;
+    animation:fall 5s linear forwards;
+}
+
+@keyframes fall{
+    from{
+        top:-50px;
+    }
+    to{
+        top:350px;
+    }
+}
+
+#gameResult{
+    margin-top:20px;
+    font-size:2rem;
+}</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+
+<audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<button class="btn music-btn" onclick="toggleMusic()">
+🎵 Play Our Song
+</button>
+
+<!-- HERO -->
+
+<section>
+
+<h1>❤️ For My Chakara! ❤️</h1>
+
+<h3>From Your Vichu</h3>
+
+<p>
+
+Hey Gathu ❤️
+
+This little website is a collection of my feelings,
+memories, and words from my heart.
+
+I know things haven't been perfect lately.
+
+But before anything else,
+I wanted you to know that you mean so much to me.
+
+Thank you for every smile.
+
+Thank you for every laugh.
+
+Thank you for every moment.
+
+</p>
+
+<button class="btn"
+onclick="document.getElementById('memories').scrollIntoView();">
+Begin Our Story ✨
+</button>
+
+</section>
+
+<!-- PHOTOS -->
+
+<section id="memories">
+
+<h2>📸 my fav Memories of us </h2>
+
+<p>
+ ❤️
+</p>
+
+<br>
+
+<div class="gallery">
+
+<img src="photo1.jpg" alt="Memory">
+
+<img src="photo2.jpg" alt="Memory">
+
+<img src="photo3.jpg" alt="Memory">
+
+</div>
+
+</section>
+
+<!-- VIDEOS -->
+
+<section>
+
+<h2>🎥 :) miss you 🎥</h2>
+
+<p>
+Some moments are better watched than described ❤️
+</p>
+
+<div class="video-box">
+<video controls>
+<source src="video1.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="video-box">
+<video controls>
+<source src="video2.mp4" type="video/mp4">
+</video>
+</div>
+
+</section>
+
+<!-- REASONS -->
+
+<section>
+
+<h2>🌸  You're Special To Me gathu  🌸</h2>
+
+<div class="card">😊 Your smile</div>
+<div class="card">❤️ Your touch </div>
+<div class="card">✨ Your beautiful eyes </div>
+<div class="card">🌹 The way you look at my eyes </div>
+<div class="card">💕 Simply the way you was mine </div>
+
+<button class="btn" onclick="showReason()">
+Why Does Vichu Love Gathu? ❤️
+</button>
+
+<div id="reasonBox"></div>
+
+</section>
+
+<!-- APOLOGY -->
+
+<section>
+
+<h2>💌 A Letter From Vichu</h2>
+
+<div class="card">
+
+<p>
+
+Hey Chakare,
+
+I know I made mistakes.
+
+I know I hurt you.
+
+And for that, I am truly sorry.
+
+I've spent a lot of time thinking about everything.
+
+About our memories.
+
+About our conversations.
+
+About all the little moments that mean so much to me.
+
+You deserve everything i mean ellam.
+
+You deserve understanding.
+
+You deserve honesty.
+
+I can't change the past.
+
+But I can learn from it.
+
+And I can work every day to become better.
+
+Not because I have to.
+
+But because you're worth it.
+
+You will always be my Chakara.
+
+You will always be my Gathu :).
+
+And you'll always have a special place in my heart.
+
+i am not perfect and can be perfect but from the moment 
+
+you see this i wont intentionally let tears flow from ur 
+
+beautiful eyes.!
+
+I PROMISE !
+
+❤️
+
+Love,
+
+Vichu
+
+</p>
+
+</div>
+
+</section>
+
+<!-- SURPRISE -->
+
+<section>
+
+<h2>🎁 One Last Thing...</h2>
+
+<p>
+Tap below ❤️
+</p>
+
+<button class="btn" onclick="showSurprise()">
+Tap Here Gathu ❤️
+</button>
+
+<div id="surprise">
+
+<div class="card">
+
+<h2>🌹 Dear Gaythri 🌹</h2>
+
+<p>
+
+Thank you for being you.
+
+Thank you for every memory.
+
+Thank you for every smile.
+
+Thank you for every moment.
+
+No matter what happens,
+you are someone I will always care about deeply.
+
+You are loved.
+
+i will die for you
+
+And you are very special to me.
+
+❤️
+
+Forever,
+
+Your Vichu
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- CUTE LOVE GAME -->
+
+<section>
+
+<h2>🎮 Catch Vichu's Hearts ❤️</h2>
+
+<p>
+Catch as many hearts as you can in 20 seconds, Gathu! 💕
+</p>
+
+<div class="card">
+
+<h3>❤️ Score: <span id="score">0</span></h3>
+
+<h3>⏳ Time: <span id="time">20</span>s</h3>
+
+<button class="btn" onclick="startGame()">
+Start Game ❤️
+</button>
+
+<div id="gameArea"></div>
+
+<div id="gameResult"></div>
+
+</div>
+
+</section>
+<div class="footer">
+sorry njn ini angnonm chyoola kochee :) 
+</div>
+
+<script>
+
+function toggleMusic(){
+
+const music=document.getElementById("bgMusic");
+const button=document.querySelector(".music-btn");
+
+if(music.paused){
+    music.play();
+    button.innerHTML="⏸️ Pause Music";
+}else{
+    music.pause();
+    button.innerHTML="🎵 Play Our Song";
+}
+
+}
+
+const reasons=[
+"Because your smile can brighten my worst day ❤️",
+"Because every memory with you is precious ✨",
+"Because you're my favorite person 🌹",
+"Because you're my Chakare ❤️",
+"Because you're my Gathu 💕",
+"Because life feels better with you ☀️",
+"Because you're beautiful inside and out 💖",
+"Because being with you feels like home ❤️"
+];
+
+function showReason(){
+
+document.getElementById("reasonBox").innerHTML=
+reasons[Math.floor(Math.random()*reasons.length)];
+
+}
+
+function showSurprise(){
+
+document.getElementById("surprise").style.display="block";
+
+document.getElementById("surprise").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+setInterval(()=>{
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(Math.random()*25+15)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},300);
+
+
+
+let score = 0;
+let timeLeft = 20;
+let gameInterval;
+let timerInterval;
+
+function startGame(){
+
+score = 0;
+timeLeft = 20;
+
+document.getElementById("score").innerText = score;
+document.getElementById("time").innerText = timeLeft;
+document.getElementById("gameResult").innerHTML = "";
+
+const gameArea = document.getElementById("gameArea");
+gameArea.innerHTML = "";
+
+clearInterval(gameInterval);
+clearInterval(timerInterval);
+
+gameInterval = setInterval(createHeart, 600);
+
+timerInterval = setInterval(()=>{
+
+timeLeft--;
+
+document.getElementById("time").innerText = timeLeft;
+
+if(timeLeft <= 0){
+
+clearInterval(gameInterval);
+clearInterval(timerInterval);
+
+let message = "";
+
+if(score < 10){
+message = "Aww ❤️ Try again Chakare 🥺";
+}
+else if(score < 20){
+message = "You're amazing Gathu 💕";
+}
+else{
+message = "Perfect! ❤️ Will you give Vichu one more chance? 🥺🌹";
+}
+
+document.getElementById("gameResult").innerHTML =
+`
+<div class="card">
+<h3>${message}</h3>
+<p>
+You caught ${score} hearts ❤️<br>
+Every heart belongs to you 💕
+</p>
+</div>
+`;
+
+}
+
+},1000);
+
+}
+
+function createHeart(){
+
+const gameArea = document.getElementById("gameArea");
+
+const heart = document.createElement("div");
+
+heart.className = "game-heart";
+heart.innerHTML = "❤️";
+
+heart.style.left =
+Math.random() * (gameArea.offsetWidth - 50) + "px";
+
+heart.onclick = () => {
+
+score++;
+
+document.getElementById("score").innerText = score;
+
+heart.innerHTML = "💖";
+
+setTimeout(()=>{
+heart.remove();
+},100);
+
+};
+
+gameArea.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},5000);
+
+}
+
+
+
+</script>
+
+</body>
+</html>
